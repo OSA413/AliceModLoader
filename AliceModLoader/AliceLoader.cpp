@@ -107,7 +107,6 @@ void AliceLoader::IdentifyApp()
 		case 0:
 		{
 			printf("Game: Episode I\n\n");
-			AliceLoader::skipDLLs = true;
 
 			printf("Setting internal resolution to %.fx%.f\n", AliceLoader::ep1Width, AliceLoader::ep1Height);
 			WRITE_MEMORY(ASLR(0x575C9C), float, AliceLoader::ep1Height);
