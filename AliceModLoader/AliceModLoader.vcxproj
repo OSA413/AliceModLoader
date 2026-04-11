@@ -93,7 +93,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies;$(ProjectDir)Dependencies\Detours\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies;$(ProjectDir)..\dependencies\Detours\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>Pch.h</ForcedIncludeFiles>
@@ -101,7 +101,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>detours.lib;syelog.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies\Detours\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\dependencies\Detours\lib.X86</AdditionalLibraryDirectories>
     </Link>
     <!-- <PostBuildEvent>
       <Command>xcopy "$(ProjectDir)bin\$(Platform)\$(Configuration)\AliceModLoader.dll" "E:\Games\steamapps\common\Sonic the Hedgehog 4 - EP 2\d3d9.dll" /Y /D /F
@@ -114,15 +114,15 @@ xcopy "$(ProjectDir)bin\$(Platform)\$(Configuration)\AliceModLoader.dll" "E:\Gam
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\Detours\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\dependencies\Detours\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>Pch.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>detours.lib;syelog.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies\Detours\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>detours.lib;syelog.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\dependencies\Detours\lib.X64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -133,7 +133,7 @@ xcopy "$(ProjectDir)bin\$(Platform)\$(Configuration)\AliceModLoader.dll" "E:\Gam
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\;$(ProjectDir)Dependencies\Detours\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\;$(ProjectDir)..\dependencies\Detours\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>Pch.h</ForcedIncludeFiles>
@@ -143,7 +143,7 @@ xcopy "$(ProjectDir)bin\$(Platform)\$(Configuration)\AliceModLoader.dll" "E:\Gam
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>detours.lib;syelog.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies;$(ProjectDir)Dependencies\Detours\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\dependencies\Detours\lib.X86</AdditionalLibraryDirectories>
     </Link>
     <!-- <PostBuildEvent>
       <Command>xcopy "$(ProjectDir)bin\$(Platform)\$(Configuration)\AliceModLoader.dll" "E:\Games\steamapps\common\Sonic the Hedgehog 4 - EP 2\d3d9.dll" /Y /D /F
@@ -159,7 +159,7 @@ xcopy "$(ProjectDir)bin\$(Platform)\$(Configuration)\AliceModLoader.dll" "$(Solu
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Dependencies\Detours\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\dependencies\Detours\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>Pch.h</ForcedIncludeFiles>
@@ -168,18 +168,17 @@ xcopy "$(ProjectDir)bin\$(Platform)\$(Configuration)\AliceModLoader.dll" "$(Solu
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>detours.lib;syelog.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies\Detours\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>detours.lib;syelog.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\dependencies\Detours\lib.X64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Sonic 4 DLL mods\Dependencies\INIReader.h" />
+    <ClInclude Include="Dependencies\INIReader.h" />
     <ClInclude Include="AliceLoader.h" />
     <ClInclude Include="FileService.h" />
-    <ClInclude Include="Dependencies\Detours\include\detours.h" />
-    <ClInclude Include="Dependencies\Detours\include\detver.h" />
-    <ClInclude Include="Dependencies\Detours\include\syelog.h" />
-    <ClInclude Include="Dependencies\Helpers.h" />
+    <ClInclude Include="$(ProjectDir)..\dependencies\Detours\include\detours.h" />
+    <ClInclude Include="$(ProjectDir)..\dependencies\Detours\include\detver.h" />
+    <ClInclude Include="$(ProjectDir)..\dependencies\Detours\include\syelog.h" />
     <ClInclude Include="D3D9Hook.h" />
     <ClInclude Include="Config.h" />
     <ClInclude Include="ModList.h" />
@@ -201,14 +200,11 @@ xcopy "$(ProjectDir)bin\$(Platform)\$(Configuration)\AliceModLoader.dll" "$(Solu
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="Dependencies\Detours\lib\x64\detours.lib" />
-    <Library Include="Dependencies\Detours\lib\x64\syelog.lib" />
-    <Library Include="Dependencies\Detours\lib\x86\detours.lib" />
-    <Library Include="Dependencies\Detours\lib\x86\syelog.lib" />
+    <Library Include="$(ProjectDir)..\dependencies\Detours\lib.X86\detours.lib" />
+    <Library Include="$(ProjectDir)..\dependencies\Detours\lib.X86\syelog.lib" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Dependencies\Detours\lib\x64\detours.pdb" />
-    <None Include="Dependencies\Detours\lib\x86\detours.pdb" />
+    <None Include="$(ProjectDir)..\dependencies\Detours\lib.X86\detours.pdb" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AliceModLoader.rc" />
