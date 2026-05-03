@@ -1,15 +1,28 @@
 #pragma once
+
+
+typedef void (InitFunc_t)();
+
 class AliceLoader
 {
 	static std::string exePath;
 public:
+	enum class EGame : uint32_t
+	{
+		episode1,
+		episode2,
+		episode2beta,
+		unknown
+	};
+
 	// AML
 	static bool enableConsole;
 	static bool waitForDebugger;
 	static bool isDebug;
-	static bool skipDLLs;
-	static bool useList;
+	static bool skipCodeModules;
+	static bool useModList;
 
+	static EGame detectedGame; 
 	static std::string patcherDir;
 
 	// Episode 1 Specific
@@ -29,8 +42,6 @@ public:
 	static void ApplyPatches();
 	static void LoadCodeMods();
 
-	static void LoadExternalModule(std::string file, std::string relativePath = "", std::string name = "");
-	static void LoadExternalModule_Direct(std::string filePath);
+	static void LoadExternalModule(std::string file, std::string relativePath = "", std::string modName = "");
+	static void LoadExternalModule_Direct(const std::string& filePath);
 };
-
-typedef void (InitFunc_t)();

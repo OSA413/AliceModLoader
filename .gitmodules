@@ -1,0 +1,3 @@
+[submodule "SharedSrc"]
+	path = SharedSrc
+	url = https://github.com/RadiantDerg/DLLShared.git
