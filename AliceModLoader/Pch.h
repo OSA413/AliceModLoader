@@ -11,7 +11,6 @@
 #include <iostream>
 
 #define BASE_ADDRESS 0x400000
-#include "Dependencies/Helpers.h"
-#include "Dependencies/INIReader.h"
-#include "D3D9Hook.h"
+#include "Helpers.h"
+#include "INIReader.h"
 #include "FileService.h"
