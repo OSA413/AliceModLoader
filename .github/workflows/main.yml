@@ -11,10 +11,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-env:
-  DETOURS_TARGET_PROCESSOR: x86
-  DETOURS_CONFIG: Release
-
 permissions:
   contents: read
 
@@ -29,12 +25,6 @@ jobs:
       - uses: actions/checkout@v5
         with:
           submodules: recursive
-
-      - name: Build Detours
-        run: |
-          cd dependencies/Detours
-          nmake
-          mv lib.X86Release lib.X86
 
       - name: Build AliceModLoader
         run: msbuild /p:Platform=x86 /p:Configuration=Release
